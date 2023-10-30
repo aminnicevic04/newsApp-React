@@ -1,0 +1,34 @@
+.main-cont {
+  width: 100vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 900;
+  /* background-color: #91989f; */
+  color: white;
+  width: auto;
+  height: 25vh;
+}
+.text-content h1 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 755px) {
+  .text-content {
+    font-size: 1.2rem; /* Prilagodite veličinu fonta prema potrebama na manjim ekranima */
+    width: 80vw; /* Prilagodite širinu kontejnera na manjim ekranima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
