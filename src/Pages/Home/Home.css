@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@900&display=swap");
 .main-cont {
   width: 100vw;
-  height: 98vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("bgc2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 0;
 }
 .text-content {
   display: flex;
@@ -21,6 +27,75 @@
 .text-content h1 {
   margin-bottom: 0;
 }
+.news-content {
+  width: 99vw;
+  height: auto;
+  background-color: #ced4da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 50px 100px 200px 50px rgba(16, 56, 55, 0.5);
+}
+.news-card-cont {
+  width: 70vw;
+  height: auto;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+}
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 4 s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.load-more-button {
+  cursor: pointer;
+  margin-top: 20px; /* Prilagodite ovo prema potrebi */
+  /* Dodajte ostale stilove prema vašim željama */
+  animation: moveUpDown 1.5s infinite alternate; /* Dodajte animaciju ovde */
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 755px) {
   .text-content {
@@ -30,5 +105,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+  }
+  .main-cont {
+    background-attachment: scroll;
   }
 }
