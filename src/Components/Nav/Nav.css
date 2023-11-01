@@ -54,6 +54,7 @@ body {
   color: #f8f9fa;
   font-weight: 800;
   font-size: 20px;
+  margin-left: 20px;
 }
 .nav-item a {
   margin: 0 2rem;
@@ -92,4 +93,5 @@ body {
   .nav-item {
     margin: 1rem 0;
   }
+  
 }

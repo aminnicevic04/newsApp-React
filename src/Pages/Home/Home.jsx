@@ -14,6 +14,7 @@ function Home() {
           `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=5b637cf26a2040b19b7b139e39f8c1d6`
         );
         setNews(response.data.articles);
+        console.log(response.data.articles)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -36,10 +37,13 @@ function Home() {
       </div>
       <div className="news-content">
         <div className="news-card-cont">
-          {news.slice(0, visibleNews).map((newsItem, index) => (
-            <NewsCard key={index} news={newsItem} />
-          ))}
-        </div>
+  {news
+    .filter((newsItem) => newsItem.urlToImage && newsItem.description && newsItem.content && newsItem.title)
+    .slice(0, visibleNews)
+    .map((newsItem, index) => (
+      <NewsCard key={index} news={newsItem} />
+    ))}
+</div>
         {visibleNews < news.length && (
           <h2 onClick={loadMore} className="load-more-button">
             Load More...

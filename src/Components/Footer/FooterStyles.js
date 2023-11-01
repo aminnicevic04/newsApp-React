@@ -3,12 +3,13 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-  padding: 0px;
+  padding-top: 10px;
   background-color: #212529;
   //   position: absolute;
   bottom: 0;
   width: 100%;
   min-height: 20%;
+
   padding-bottom: 10px;
   @media (max-width: 1000px) {
     padding: 70px 30px;
@@ -43,12 +44,13 @@ export const Row = styled.div`
 
 export const FooterLink = styled.a`
   color: #fff;
+  cursor: pointer;
   margin-bottom: 13px;
   font-size: 13px;
   text-decoration: none;
 
   &:hover {
-    color: pink;
+    color: #adb5bd;
     transition: 200ms ease-in;
   }
 `;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import "./Nav.css";
 import Logo from "./logo.png";
@@ -15,18 +16,20 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  const navigate = useNavigate()
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item1">
-            <a href="#contact" className="nav-link">
+            <a onClick={()=> navigate('/contact-us')} className="nav-link" style={{cursor:'pointer'}}>
               Contact Us
             </a>
           </li>
         </ul>
         <div className="navbar-logo">
-          <img src={Logo} alt="Logo" className="logo-img" />
+          <img src={Logo} alt="Logo" className="logo-img" onClick={()=>navigate('/')}  style={{cursor:'pointer'}}/>
         </div>
         <div
           className={`menu-icon ${isOpen ? "active" : ""}`}
@@ -36,7 +39,7 @@ const Nav = () => {
         </div>
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
-            <a href="#about" className="nav-link">
+            <a className="nav-link" style={{cursor:'pointer'}}>
               About
             </a>
           </li>

@@ -9,29 +9,45 @@ import {
   FooterLink,
   Heading,
 } from "./FooterStyles";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <FooterContainer>
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Founders</FooterLink>
-            <FooterLink href="#">Service - Team</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
+            <FooterLink onClick={() => navigate("/about")}>Founders</FooterLink>
+            <FooterLink onClick={() => navigate("/about")}>
+              Service - Team
+            </FooterLink>
+            <FooterLink onClick={() => navigate("/about")}>
+              Testimonials
+            </FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Reports</FooterLink>
-            <FooterLink href="#">Sugestions</FooterLink>
+            <FooterLink onClick={() => navigate("/contact")}>
+              Writing
+            </FooterLink>
+            <FooterLink onClick={() => navigate("/contact")}>
+              Reports
+            </FooterLink>
+            <FooterLink onClick={() => navigate("/contact")}>
+              Sugestions
+            </FooterLink>
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">help@gmail.com</FooterLink>
-            <FooterLink href="#">internship@info.com</FooterLink>
-            <FooterLink href="#">+381 1123123</FooterLink>
+            <FooterLink onClick={() => navigate("/contact")}>
+              help@gmail.com
+            </FooterLink>
+            <FooterLink onClick={() => navigate("/contact")}>
+              internship@info.com
+            </FooterLink>
+            <FooterLink>+381 1123123</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
