@@ -35,7 +35,7 @@ const Nav = () => {
           className={`menu-icon ${isOpen ? "active" : ""}`}
           onClick={toggleNavbar}
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {isOpen ? <FaTimes /> : <FaBars className="fabars" />}
         </div>
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
@@ -43,6 +43,11 @@ const Nav = () => {
               About
             </a>
           </li>
+          {/* <li className="nav-item">
+            <a className="nav-link" style={{cursor:'pointer'}}>
+              Contact
+            </a>
+          </li> */}
         </ul>
       </div>
     </nav>

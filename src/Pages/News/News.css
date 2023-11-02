@@ -1,0 +1,16 @@
+.main-div{
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+
+}
+.header{
+    width: 100% ;
+    height: 50vh;
+    background-image:url(./bgc-news.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(5%) blur(0%);
+    background-attachment: fixed;
+    background-position:bottom;
+}

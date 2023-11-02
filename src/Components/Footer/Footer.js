@@ -29,22 +29,22 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink onClick={() => navigate("/contact")}>
+            <FooterLink onClick={() => navigate("/contact-us")}>
               Writing
             </FooterLink>
-            <FooterLink onClick={() => navigate("/contact")}>
+            <FooterLink onClick={() => navigate("/contact-us")}>
               Reports
             </FooterLink>
-            <FooterLink onClick={() => navigate("/contact")}>
+            <FooterLink onClick={() => navigate("/contact-us")}>
               Sugestions
             </FooterLink>
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink onClick={() => navigate("/contact")}>
+            <FooterLink onClick={() => navigate("/contact-us")}>
               help@gmail.com
             </FooterLink>
-            <FooterLink onClick={() => navigate("/contact")}>
+            <FooterLink onClick={() => navigate("/contact-us")}>
               internship@info.com
             </FooterLink>
             <FooterLink>+381 1123123</FooterLink>
