@@ -39,13 +39,13 @@ const Nav = () => {
         </div>
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
-            <a className="nav-link" style={{cursor:'pointer'}}>
+            <a className="nav-link" style={{cursor:'pointer'}} onClick={()=> navigate('/about')}>
               About
             </a>
           </li>
           {/* <li className="nav-item">
             <a className="nav-link" style={{cursor:'pointer'}}>
-              Contact
+              Contact 
             </a>
           </li> */}
         </ul>

@@ -16,7 +16,7 @@ function News() {
   useEffect(() => {
     const getNews = async () => {
       try {
-        const response = await axios.get(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=5b637cf26a2040b19b7b139e39f8c1d6&pageSize=100`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=a88ea21a8fb14609b233a1610018fcd3`);
         setAllNews(response.data.articles);
       } catch (error) {
         console.log('Error fetching data:', error);
