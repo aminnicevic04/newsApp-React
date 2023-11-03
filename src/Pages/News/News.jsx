@@ -11,6 +11,7 @@ function News() {
   const [currentPage, setCurrentPage] = useState(1);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(18);
+  
 
   useEffect(() => {
     const getNews = async () => {
@@ -31,6 +32,7 @@ function News() {
     setStartIndex(startIndex + 18);
     setEndIndex(endIndex + 18);
     setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 0)
   };
 
   const handlePrevClick = () => {
@@ -53,13 +55,13 @@ function News() {
   icon={faBackward}
   onClick={handlePrevClick}
   className={startIndex <= 0 ? 'disabled-icon' : ''}
-  style={{ fontSize: '2em' }}
+  style={{ fontSize: '2em', cursor:'pointer' }}
 />
 <FontAwesomeIcon
   icon={faForward}
   onClick={handleNextClick}
   className={endIndex >= allNews.length ? 'disabled-icon' : ''}
-  style={{ fontSize: '2em', marginLeft:'20px' }}
+  style={{ fontSize: '2em', marginLeft:'20px', cursor:'pointer' }}
 />
       </div>
     </div>
