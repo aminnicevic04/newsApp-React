@@ -16,7 +16,7 @@ function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=5b637cf26a2040b19b7b139e39f8c1d6`
+          `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=a88ea21a8fb14609b233a1610018fcd3`
         );
         setNews(response.data.articles);
       } catch (error) {
@@ -63,7 +63,7 @@ function Home() {
           Stay updated with our latest articles, news, and updates. Explore insightful content curated just for you.
         </p>
         <Button disabled={false} size="large" variant="elevated" className="btn1" onClick={()=>navigate('/news')}>
-          <span>Click me</span>
+          <span>Go to News page</span>
         </Button>
         <div className="news-card-cont">
           {news

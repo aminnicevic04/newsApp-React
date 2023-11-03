@@ -40,6 +40,19 @@
     background-color: gray;
 }
 .disabled-icon {
-  opacity: 0.5; /* Smanjivanje prozirnosti onemogućenih ikona */
-  pointer-events: none; /* Onemogućavanje interakcije sa ikonom */
+  opacity: 0.5; 
+  pointer-events: none;
+}
+.sorting{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 160px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sorting label{
+    font-weight: 700;
+    color: white;
+    margin-right: 20px;
 }

@@ -14,8 +14,12 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { useNavigate } from 'react-router-dom';
 
 function NewsCard({ news }) {
+
+  const navigate = useNavigate();
+
   function formatDate(publishedAt) {
     const options = {
       year: "numeric",
@@ -33,7 +37,7 @@ function NewsCard({ news }) {
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} >
       <CardHeader
         avatar={
           <Avatar
@@ -56,9 +60,9 @@ function NewsCard({ news }) {
         alt="Photo"
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {news.description}
-        </Typography>
+        <Typography style={{cursor:'pointer'}} variant="body2" color="text.secondary" onClick={() => navigate(`/news/${news.title}`, { state: news })}>
+  {news.description}
+</Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
