@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import axios from "axios";
-import NewsCard from "./NewsCard/NewsCard";
+import NewsCard from "../../Components/NewsCard/NewsCard";
 import Button from '@mui/material-next/Button';
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +12,7 @@ function Home() {
   const navigate = useNavigate()
 
   useEffect(() => {
+
     const fetchData = async () => {
       try {
         const response = await axios.get(

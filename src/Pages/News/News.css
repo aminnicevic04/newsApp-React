@@ -1,16 +1,45 @@
 .main-div{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: blueviolet;
 
 }
 .header{
     width: 100% ;
-    height: 50vh;
+    height: 30vh;
     background-image:url(./bgc-news.png);
     background-repeat: no-repeat;
     background-size: cover;
     filter: grayscale(5%) blur(0%);
     background-attachment: fixed;
     background-position:bottom;
+}
+
+.news-cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pagination{
+    width: 100%;
+    height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Dodajte ovaj stil za razmak između prethodnog dugmeta i ikone */
+
+}
+.page-btns{
+    width: 100px;
+    height: 60px;
+    background-color: gray;
+}
+.disabled-icon {
+  opacity: 0.5; /* Smanjivanje prozirnosti onemogućenih ikona */
+  pointer-events: none; /* Onemogućavanje interakcije sa ikonom */
 }
