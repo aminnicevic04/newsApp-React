@@ -31,25 +31,22 @@ const About = () => {
               <span className="address-logo">
                 <i className="fas fa-paper-plane"></i>
               </span>
-              <p>State</p>
-              <span className="saprater">:</span>
-              <p>Serbia, Belgrade</p>
+              <p style={{ color: "green" }}>State :</p>
+              <p> Serbia</p>
             </li>
             <li>
               <span className="address-logo">
                 <i className="fas fa-phone-alt"></i>
               </span>
-              <p>Call center</p>
-              <span className="saprater">:</span>
-              <p>+91 987-654-4321</p>
+              <p style={{ color: "green" }}>Call center :</p>
+              <p> +91 987-654-4321</p>
             </li>
             <li>
               <span className="address-logo">
                 <i className="far fa-envelope"></i>
               </span>
-              <p>Email </p>
-              <span className="saprater">:</span>
-              <p>globalnewshub@journal.com</p>
+              <p style={{ color: "green" }}>Email : </p>
+              <p> globalnewshub@journal.com</p>
             </li>
           </ul>
         </div>

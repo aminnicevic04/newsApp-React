@@ -6,10 +6,8 @@ function SingleNews() {
   const { title } = useParams();
   const location = useLocation();
 
-  // Check if news object is defined
   const { state: news } = location;
   if (!news) {
-    // Handle the case where news object is null or undefined
     return <div>No news found</div>;
   }
 console.log(news)

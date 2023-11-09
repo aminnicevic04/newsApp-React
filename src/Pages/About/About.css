@@ -13,6 +13,7 @@
   align-items: center;
   padding: 60px 12%;
   justify-content: center;
+  padding-top: 150px;
 }
 .about-left img {
   width: 40rem;
@@ -20,6 +21,7 @@
   transform: translateY(0px);
   position: relative;
   right: 50px;
+  margin-right: 50px;
 }
 .about-right {
   width: 54%;

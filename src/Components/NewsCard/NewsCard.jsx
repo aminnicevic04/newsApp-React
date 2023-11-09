@@ -14,10 +14,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function NewsCard({ news }) {
-
   const navigate = useNavigate();
 
   function formatDate(publishedAt) {
@@ -37,7 +36,7 @@ function NewsCard({ news }) {
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }} style={{cursor:'pointer'}} color="text.secondary" onClick={() => navigate(`/news/${news.title}`, { state: news })}>
+    <Card sx={{ maxWidth: 345 }} color="text.secondary">
       <CardHeader
         avatar={
           <Avatar
@@ -54,6 +53,8 @@ function NewsCard({ news }) {
         subheader={formatDate(news.publishedAt)}
       />
       <CardMedia
+        onClick={() => navigate(`/news/${news.title}`, { state: news })}
+        style={{ cursor: "pointer" }}
         component="img"
         height="194"
         image={news.urlToImage}
@@ -61,8 +62,8 @@ function NewsCard({ news }) {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-  {news.description}
-</Typography>
+          {news.description}
+        </Typography>
       </CardContent>
     </Card>
   );
