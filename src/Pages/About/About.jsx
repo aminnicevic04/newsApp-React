@@ -1,6 +1,6 @@
-import React from 'react';
-import './About.css'
-import Team from './team.png'
+import React from "react";
+import "./About.css";
+import Team from "./team.png";
 
 const About = () => {
   return (
@@ -12,11 +12,18 @@ const About = () => {
 
       {/* about right  */}
       <div className="about-right">
-        <h1>About Me</h1>
+        <h1>Our Team</h1>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat a dolorem at
-          similique maxime dolorum dolore enim dicta voluptatibus, illum recusandae, vel optio
-          tempore ipsum incidunt eum. Aspernatur, repellendus.
+          Our team is a diverse group of experts comprising experienced
+          journalists, analysts, and correspondents from various parts of the
+          world. Their deep expertise, dedication to research, and passion for
+          journalism form the core of our editorial team. Our journalists are
+          here to investigate and report on the latest events, our analysts
+          provide deeper insights and analyses, while our correspondents bring
+          local perspectives and firsthand stories. This diverse team enables us
+          to deliver comprehensive and reliable coverage from all corners of the
+          globe.
         </p>
         <div className="address">
           <ul>
@@ -24,15 +31,15 @@ const About = () => {
               <span className="address-logo">
                 <i className="fas fa-paper-plane"></i>
               </span>
-              <p>Address</p>
+              <p>State</p>
               <span className="saprater">:</span>
-              <p>Jaipur, Rajasthan, India</p>
+              <p>Serbia, Belgrade</p>
             </li>
             <li>
               <span className="address-logo">
                 <i className="fas fa-phone-alt"></i>
               </span>
-              <p>Phone No</p>
+              <p>Call center</p>
               <span className="saprater">:</span>
               <p>+91 987-654-4321</p>
             </li>
@@ -40,13 +47,12 @@ const About = () => {
               <span className="address-logo">
                 <i className="far fa-envelope"></i>
               </span>
-              <p>Email ID</p>
+              <p>Email </p>
               <span className="saprater">:</span>
-              <p>crowncoder@gmail.com</p>
+              <p>globalnewshub@journal.com</p>
             </li>
           </ul>
         </div>
-        
       </div>
     </section>
   );

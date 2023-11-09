@@ -37,7 +37,7 @@ function NewsCard({ news }) {
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }} >
+    <Card sx={{ maxWidth: 345 }} style={{cursor:'pointer'}} color="text.secondary" onClick={() => navigate(`/news/${news.title}`, { state: news })}>
       <CardHeader
         avatar={
           <Avatar
@@ -60,18 +60,10 @@ function NewsCard({ news }) {
         alt="Photo"
       />
       <CardContent>
-        <Typography style={{cursor:'pointer'}} variant="body2" color="text.secondary" onClick={() => navigate(`/news/${news.title}`, { state: news })}>
+        <Typography variant="body2" color="text.secondary">
   {news.description}
 </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-      </CardActions>
     </Card>
   );
 }
